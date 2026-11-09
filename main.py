@@ -4,16 +4,30 @@ from features import create_features
 import joblib
 import numpy as np
 from fastapi.middleware.cors import CORSMiddleware
+import os
+from pathlib import Path
 
 app = FastAPI(title="Turbofan RUL Predictor")
+
+allowed_origins = [
+    "http://localhost:5173",
+    "http://127.0.0.1:5173",
+]
+
+frontend_url = os.getenv("FRONTEND_URL")
+
+if frontend_url:
+    allowed_origins.append(frontend_url.rstrip("/"))
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],
+    allow_origins=allowed_origins,
     allow_methods=["POST"],
     allow_headers=["*"],
 )
 
-saved_model = joblib.load("turbofan_rul_predictor.joblib")
+model_path = Path(__file__).resolve().parent / "turbofan_rul_predictor.joblib"
+saved_model = joblib.load(model_path)
 
 model = saved_model["model"]
 feature_columns = saved_model["feature_columns"]
