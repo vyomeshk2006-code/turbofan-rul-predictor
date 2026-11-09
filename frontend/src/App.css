@@ -1,0 +1,428 @@
+.app-shell {
+  max-width: 1200px;
+  margin: 24px auto;
+  overflow: hidden;
+  background: #f5f8fd;
+  border: 1px solid #d4dfed;
+  border-radius: 18px;
+  box-shadow: 0 16px 50px rgba(30, 65, 110, 0.08);
+}
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  min-height: 76px;
+  padding: 16px 36px;
+  background: #ffffff;
+  border-bottom: 1px solid #dce6f2;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #102e54;
+  font-size: 19px;
+  font-weight: 750;
+  text-decoration: none;
+}
+
+.brand-icon {
+  color: #1261ce;
+  font-size: 30px;
+}
+
+.nav-link {
+  padding: 10px 0;
+  color: #075cce;
+  font-weight: 650;
+  text-decoration: none;
+  border-bottom: 3px solid #1670e8;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  min-height: 240px;
+  padding: 28px 40px;
+  background-color: #e4f1ff;
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(241, 248, 255, 0.98) 0%,
+      rgba(241, 248, 255, 0.88) 35%,
+      rgba(241, 248, 255, 0) 66%
+    ),
+    url("/turbofan-banner.png");
+  background-size: cover;
+  background-position: center;
+  border-bottom: 1px solid #cfdfef;
+}
+
+.hero-copy {
+  max-width: 480px;
+  padding-left: 20px;
+  border-left: 4px solid #1670e8;
+}
+
+.eyebrow {
+  margin-bottom: 10px;
+  color: #285f96;
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: 2px;
+}
+
+.hero h1 {
+  color: #102e54;
+  font-size: clamp(32px, 4vw, 46px);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -1.5px;
+}
+
+.hero-description {
+  max-width: 340px;
+  margin-top: 14px;
+  color: #304f70;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.page-content {
+  padding: 28px 36px 20px;
+}
+
+.upload-panel,
+.results-panel {
+  padding: 24px;
+  background: #ffffff;
+  border: 1px solid #d5e1ef;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(32, 68, 108, 0.04);
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.step-number {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 42px;
+  height: 42px;
+  color: #1261ce;
+  background: #eaf3ff;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 750;
+}
+
+h2 {
+  color: #163657;
+  font-size: 21px;
+  line-height: 1.3;
+}
+
+.section-heading p,
+.results-heading p {
+  margin-top: 5px;
+  color: #536b84;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.upload-controls {
+  display: flex;
+  align-items: flex-end;
+  gap: 18px;
+  margin-top: 22px;
+}
+
+.file-field {
+  flex: 1;
+  min-width: 0;
+}
+
+.file-field label {
+  display: block;
+  margin-bottom: 8px;
+  color: #304c69;
+  font-size: 14px;
+  font-weight: 650;
+}
+
+input[type="file"] {
+  width: 100%;
+  min-width: 0;
+  padding: 8px;
+  color: #3a536d;
+  background: #f7faff;
+  border: 1px solid #c5d5e8;
+  border-radius: 9px;
+  font-size: 14px;
+}
+
+input[type="file"]::file-selector-button {
+  margin-right: 12px;
+  padding: 9px 14px;
+  color: #174f91;
+  background: #e7f0fc;
+  border: 1px solid #bed1e8;
+  border-radius: 6px;
+  font-weight: 650;
+  cursor: pointer;
+}
+
+button {
+  min-height: 54px;
+  padding: 12px 28px;
+  color: #ffffff;
+  background: #0965df;
+  border: none;
+  border-radius: 9px;
+  font-size: 16px;
+  font-weight: 700;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+button:hover:not(:disabled) {
+  background: #0754be;
+}
+
+button:disabled {
+  opacity: 0.65;
+  cursor: wait;
+}
+
+.file-help {
+  margin-top: 12px;
+  color: #405873;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.error-message {
+  margin-top: 16px;
+  padding: 12px 14px;
+  color: #9f2020;
+  background: #fff1f1;
+  border: 1px solid #f0caca;
+  border-radius: 8px;
+  font-size: 14px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.loading-message {
+  margin-top: 12px;
+  color: #1559a2;
+  font-size: 14px;
+}
+
+.error-message:empty,
+.loading-message:empty {
+  display: none;
+}
+
+.results-panel {
+  margin-top: 24px;
+}
+
+.results-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.engine-count {
+  flex-shrink: 0;
+  padding: 7px 12px;
+  color: #175da6;
+  background: #edf5ff;
+  border: 1px solid #d1e4fa;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.table-container {
+  max-height: 480px;
+  overflow: auto;
+  border: 1px solid #d6e2ef;
+  border-radius: 9px;
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 14px;
+}
+
+th,
+td {
+  padding: 15px 20px;
+  text-align: left;
+}
+
+th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  color: #183e67;
+  background: #deedff;
+  border-bottom: 1px solid #c4d8ef;
+  font-weight: 700;
+}
+
+td {
+  color: #354f6b;
+  border-bottom: 1px solid #e3ebf5;
+  font-variant-numeric: tabular-nums;
+}
+
+tbody tr:nth-child(even) {
+  background: #f7faff;
+}
+
+tbody tr:hover {
+  background: #edf5ff;
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.rul-value {
+  color: #145caa;
+  font-weight: 700;
+}
+
+.empty-state {
+  padding: 30px 16px;
+  text-align: center;
+  background: #f8fbff;
+  border: 1px dashed #cbdcf0;
+  border-radius: 10px;
+}
+
+.empty-icon {
+  display: inline-block;
+  margin-bottom: 10px;
+  color: #3379c5;
+  font-size: 28px;
+}
+
+.empty-state h3 {
+  color: #375674;
+  font-size: 16px;
+}
+
+.empty-state p {
+  margin-top: 8px;
+  color: #60778e;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.page-footer {
+  padding: 20px 4px 0;
+  color: #64788e;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.page-footer span {
+  display: block;
+}
+
+@media (max-width: 700px) {
+  .app-shell {
+    margin: 0;
+    border: none;
+    border-radius: 0;
+  }
+
+  .site-header {
+    min-height: 66px;
+    padding: 14px 18px;
+  }
+
+  .brand {
+    gap: 8px;
+    font-size: 15px;
+  }
+
+  .brand-icon {
+    font-size: 24px;
+  }
+
+  .nav-link {
+    font-size: 14px;
+  }
+
+  .hero {
+    min-height: 220px;
+    padding: 24px 20px;
+    background-image:
+      linear-gradient(
+        90deg,
+        rgba(241, 248, 255, 0.98),
+        rgba(241, 248, 255, 0.8) 65%,
+        rgba(241, 248, 255, 0.35)
+      ),
+      url("/turbofan-banner.png");
+    background-position: right center;
+  }
+
+  .hero-copy {
+    max-width: 300px;
+    padding-left: 14px;
+  }
+
+  .hero-description {
+    font-size: 14px;
+  }
+
+  .page-content {
+    padding: 18px 12px;
+  }
+
+  .upload-panel,
+  .results-panel {
+    padding: 18px 14px;
+  }
+
+  .upload-controls {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  .results-heading {
+    flex-wrap: wrap;
+  }
+
+  th,
+  td {
+    padding: 12px 10px;
+  }
+
+  table {
+    min-width: 420px;
+    font-size: 13px;
+  }
+}

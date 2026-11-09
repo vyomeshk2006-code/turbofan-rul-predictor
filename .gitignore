@@ -1,0 +1,26 @@
+# Installed Python packages
+.venv/
+
+# Temporary Python files
+__pycache__/
+*.pyc
+
+# Installed JavaScript packages
+node_modules/
+
+# Generated frontend build
+frontend/dist/
+
+# Private configuration
+.env
+.env.*
+!.env.example
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Saved parameters from earlier experiments
+gru_cv_fold*_parameters.pth
+gru_fold1_parameters.pth
+gd_parameters.npz
